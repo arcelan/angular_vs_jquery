@@ -4,6 +4,9 @@ app.controller('x-controller',function($scope) {
     $scope.jquery_name = '';
     $scope.set = function() {
         $scope.angular_name = 'lu zhiyuan';
+        setTimeout(function() {
+            $scope.angular_name = 'lu zhiyuan timeout';
+        }, 0);
     }
     $scope.reset = function() {
         $scope.angular_name = '';
