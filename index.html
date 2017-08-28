@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="x-app">
+<head>
+    <meta charset="UTF-8">
+    <title>angular data binding</title>
+    <link rel="stylesheet" href="vendor/bootstrap.css">
+    <style>
+        #angular-name, #jquery-name {
+            border-left: 0;
+        }
+    </style>
+    <script src="vendor/jquery.js"></script>
+    <script src="vendor/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div id="x-scope" class="container" ng-controller="x-controller">
+        <div style="height: 30px;"></div>
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">angular</h3>
+            </div>
+            <div class="panel-body">
+                <div class="input-group">
+                    <span class="input-group-addon">@</span>
+                    <input type="text" class="form-control" placeholder="Username" ng-model="angular_name">
+                    <span class="input-group-addon" id="angular-name" ng-cloak>{{ angular_name }}</span>
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="set()">set</button>
+                        <button type="button" class="btn btn-default" ng-click="reset()">reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h3 class="panel-title">jQuery</h3>
+            </div>
+            <div class="panel-body">
+                <div class="input-group">
+                    <span class="input-group-addon">@</span>
+                    <input type="text" class="form-control" placeholder="Username" ng-model="jquery_name">
+                    <span class="input-group-addon" id="jquery-name" ng-cloak>{{ jquery_name }}</span>
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" id="jquery-set">set</button>
+                        <button type="button" class="btn btn-default" id="jquery-reset">reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
