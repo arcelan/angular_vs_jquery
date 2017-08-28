@@ -18,4 +18,7 @@ $(function() {
     $('#jquery-reset').click(function() {
         $scope.jquery_name = '';
     });
+    $('#jquery-apply').click(function() {
+        $scope.$apply();
+    });
 });
