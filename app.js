@@ -1,10 +1,10 @@
 var app = angular.module('x-app',[]);
-app.controller('x-controller',function($scope) {
+app.controller('x-controller',function($scope, $timeout) {
     $scope.angular_name = '';
     $scope.jquery_name = '';
     $scope.set = function() {
         $scope.angular_name = 'lu zhiyuan';
-        setTimeout(function() {
+        $timeout(function() {
             $scope.angular_name = 'lu zhiyuan timeout';
         }, 0);
     }
